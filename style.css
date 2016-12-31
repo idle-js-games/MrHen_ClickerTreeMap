@@ -1,0 +1,76 @@
+body {
+  padding: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+.treemap-container {
+}
+
+.treemap {
+  margin: auto;
+}
+
+.score {
+  text-align: center;
+}
+
+.score::before {
+  content: "Current power: "
+}
+
+.node {
+  font: 10px sans-serif;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.node.leaf {
+  background: lightgrey;
+  border: solid 1px grey;
+}
+
+.node.leaf.failure {
+  border: solid 1px darkred;
+}
+
+.node.completed .node-progress {
+  display: none;
+}
+
+.node.started .node-progress {
+  border-right: inherit;
+  border-right-width: 1px;
+  border-right-style: dashed;
+}
+
+.node-progress {
+  height: 100%;
+}
+
+.node-container {
+  visibility: hidden;
+  width: 100%;
+}
+
+.node-label {
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  background: lightgrey;
+  padding: 2px;
+  margin: 2px;
+  float: left;
+}
+
+.node:hover .node-container {
+  visibility: visible;
+}
